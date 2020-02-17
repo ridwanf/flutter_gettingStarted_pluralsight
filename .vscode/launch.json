@@ -8,11 +8,11 @@
       "name": "Flutter",
       "type": "dart",
       "request": "launch",
-      "program": "trip_cost_app/lib/main.dart"
+      "program": "todo_app/lib/main.dart"
     },
     {
       "name": "Dart",
-      "program": "bin/main.dart",
+      "program": "todo_app/lib/main.dart",
       "request": "launch",
       "type": "dart"
     }
