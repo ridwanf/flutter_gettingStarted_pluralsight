@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/model/todo.dart';
+import 'package:todo_app/screens/tododetail.dart';
 import 'package:todo_app/util/dbhelper.dart';
 
 class TodoList extends StatefulWidget {
@@ -50,6 +51,15 @@ class TodoListState extends State {
       }
     }
 
+    void navigateToDetail(Todo todo) async {
+      bool result = await Navigator.push(context, 
+        MaterialPageRoute(builder: (context) => TodoDetail(todo)),
+      );
+      if (result == true) {
+        getData();
+      }
+    }
+
     ListView todoListItems() {
       return ListView.builder(
           itemCount: count,
@@ -69,6 +79,7 @@ class TodoListState extends State {
                   onTap: () {
                     debugPrint(
                         'Tapped on ' + this.todos[position].id.toString());
+                        navigateToDetail(todos[position]);
                   },
                 ),
               );
@@ -83,7 +94,9 @@ class TodoListState extends State {
     return Scaffold(
       body: todoListItems(),
       floatingActionButton: FloatingActionButton(
-        onPressed: null,
+        onPressed: () => {
+          navigateToDetail(Todo('', 3, ''))
+        },
         tooltip: "Add new Todo",
         child: new Icon(Icons.add),
       ),

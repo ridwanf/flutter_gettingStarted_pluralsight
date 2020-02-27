@@ -8,11 +8,11 @@
       "name": "Flutter",
       "type": "dart",
       "request": "launch",
-      "program": "todo_app/lib/main.dart"
+      "program": "square/square/lib/main.dart"
     },
     {
       "name": "Dart",
-      "program": "todo_app/lib/main.dart",
+      "program": "square/square/lib/main.dart",
       "request": "launch",
       "type": "dart"
     }

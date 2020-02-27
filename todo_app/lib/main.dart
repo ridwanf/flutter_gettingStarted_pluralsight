@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/model/todo.dart';
 import 'package:todo_app/screens/todolist.dart';
-import 'package:todo_app/util/dbhelper.dart';
 
 void main() => runApp(MyApp());
 
